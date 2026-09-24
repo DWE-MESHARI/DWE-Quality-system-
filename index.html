@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>نظام إدارة جودة خدمة العملاء</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/clay.css">
+<link rel="stylesheet" href="clay.css"><!-- احتياطي للرفع المسطح -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%279%27 fill=%27%237C6AD8%27/%3E%3Cpath d=%27M8 21l5-5 4 4 7-9%27 stroke=%27white%27 stroke-width=%273%27 fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E"><!-- احتياطي إذا رُفع الملف بجوار index.html مباشرة -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+<div id="login" class="login"><form id="lf" class="cd"><svg viewBox="0 0 32 32" width="60" height="60"><defs><linearGradient id="lgr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9A8AE6"/><stop offset="1" stop-color="#5642B3"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#lgr)"/><path d="M8 21l5-5 4 4 7-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="10" r="2.6" fill="#FBC8DA"/></svg><h2>أهلًا بك</h2><p class="lt">سجّلي الدخول لمتابعة جودة الخدمة</p><label>البريد الإلكتروني</label><input id="em" type="email" required autocomplete="username"><label>كلمة المرور</label><input id="pw" type="password" required autocomplete="current-password"><button class="btn">دخول</button><p id="le"></p></form></div>
+<div class="wrap"><aside class="noprint"><div class="lg"><svg viewBox="0 0 32 32" width="40" height="40"><rect width="32" height="32" rx="9" fill="#fff"/><path d="M8 21l5-5 4 4 7-9" stroke="#7C6AD8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="10" r="2.6" fill="#E8598A"/></svg><span>نظام الجودة</span></div><nav id="nav"></nav><div id="who"></div></aside><div class="mn">
+<header class="hero">
+<h1>نظام إدارة جودة خدمة تجربة العميل — ما بعد البيع</h1>
+<p id="sub"></p>
+</header>
+<main><div id="wn"></div><div id="top"></div><div id="out"></div></main></div></div>
+<div id="toast"></div>
+<script type="module">
+  // يحمّل js/app.js، وإن لم يوجد (رفع الملفات بدون مجلدات) يحمّل app.js من نفس المستوى
+  const ok = async u => { try { return (await fetch(u, { method: 'HEAD' })).ok } catch (e) { return false } };
+  const p = (await ok('js/app.js')) ? './js/app.js' : './app.js';
+  import(p).catch(e => { document.body.insertAdjacentHTML('afterbegin', '<p style="padding:12px;color:#b00">تعذّر تحميل ملفات النظام (' + p + '). تأكدي أن مجلدي css وjs مرفوعان في المستودع بنفس الهيكل.</p>'); console.error(e) });
+</script>
+</body></html>

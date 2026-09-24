@@ -1,0 +1,73 @@
+/* ===== ثيم Clay الاحترافي: يُحمَّل بعد style.css ===== */
+:root{--bg:#F5F1E8;--cd:#FFFCF6;--tx:#2F2540;--mu:#6F6580;--ln:#E7DFD0;--pr:#7C6AD8;--ac:#E8598A;--tc:#7C6AD8;--sh1:rgba(70,50,110,.14);--sh2:rgba(255,255,255,.9);--cl:0 12px 30px var(--sh1),0 2px 6px rgba(70,50,110,.07),inset 0 1px 0 rgba(255,255,255,.95),inset 0 -3px 6px rgba(70,50,110,.04);--cs:0 4px 12px var(--sh1),inset 0 1px 0 rgba(255,255,255,.9)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#241D2E;--cd:#322A40;--tx:#F3EAF7;--mu:#BFB1CF;--ln:#4A3F5C;--sh1:rgba(0,0,0,.45);--sh2:rgba(255,255,255,.06)}}
+:root[data-theme="dark"]{--bg:#241D2E;--cd:#322A40;--tx:#F3EAF7;--mu:#BFB1CF;--ln:#4A3F5C;--sh1:rgba(0,0,0,.45);--sh2:rgba(255,255,255,.06)}
+body{background:radial-gradient(600px 420px at 100% 0,rgba(124,106,216,.16),transparent),radial-gradient(600px 420px at 0 100%,rgba(232,89,138,.10),transparent),var(--bg);font-family:Tajawal,'Baloo Bhaijaan 2',Tahoma,sans-serif;font-weight:500;color:var(--tx);line-height:1.6}
+.g{color:#2F9E58}.b{color:#4F6FDA}.a{color:#C77A00}.r{color:#D9443B}
+.bd{box-shadow:0 2px 5px var(--sh1),inset 0 1px 0 rgba(255,255,255,.3);padding:3px 12px;font-weight:700}
+.bd.g{background:#2F9E58}.bd.b{background:#4F6FDA}.bd.a{background:#F2A93B;color:#3a2a10}.bd.r{background:#D9443B}.bd.n{background:#A69AB6}
+.pb i.fg{background:#2F9E58}.pb i.fb{background:#4F6FDA}.pb i.fa{background:#F2A93B}.pb i.fr{background:#D9443B}
+.pb{height:8px;border-radius:8px;background:rgba(70,50,110,.09)}.pb i{border-radius:8px;background:var(--tc)}
+/* الهيكل */
+aside{background:linear-gradient(170deg,#6F5CCB,#5642B3);border-radius:26px;margin-block:16px;margin-inline-start:16px;box-shadow:0 14px 34px rgba(70,50,140,.35),inset 0 1px 0 rgba(255,255,255,.25);padding:22px 14px}
+@media(min-width:801px){aside{height:calc(100vh - 32px);top:16px}}
+@media(max-width:800px){aside{margin:12px;border-radius:20px}}
+aside .lg{font-size:20px;font-weight:800;padding:4px 10px 22px;letter-spacing:.2px}
+nav button{border-radius:14px;font-weight:700;font-size:14.5px;padding:9px 10px;opacity:.92}
+nav button:hover{background:rgba(255,255,255,.12)}
+nav button svg{width:30px;height:30px;padding:6px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.4)}
+nav button.on{background:var(--cd);color:var(--c);opacity:1;box-shadow:0 6px 16px rgba(0,0,0,.2)}
+.wu{background:rgba(255,255,255,.14);border-radius:16px}
+.hero{position:relative;overflow:hidden;margin:16px clamp(12px,3vw,32px) 0;border:0;border-radius:22px;background:var(--tc);box-shadow:var(--cl);padding:20px 28px}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,0) 35%,rgba(255,255,255,.2));pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.hero h1{font-size:clamp(20px,2.6vw,28px);font-weight:800;text-shadow:none}
+.hero p{opacity:.9}
+main{padding-top:4px}
+h2{font-size:19px;font-weight:800;margin:26px 0 12px;padding-right:12px;border-right:5px solid var(--tc);border-radius:3px}
+/* البطاقات */
+.cd,.k{background:var(--cd);border:1px solid var(--ln);border-radius:20px;box-shadow:var(--cl)}
+.k{position:relative;overflow:hidden;padding:18px}
+.k::before{content:'';position:absolute;inset:0;background:var(--c,#7C6AD8);opacity:.09;pointer-events:none}
+.k::after{content:'';position:absolute;inset:0 0 auto 0;height:4px;background:var(--c,#7C6AD8);pointer-events:none}
+.k>*{position:relative}
+.k small{font-weight:700;color:var(--mu)}
+.k b{font-size:30px;font-weight:800;color:var(--tx)}
+.k b.g{color:#2F9E58}.k b.r{color:#D9443B}.k b.a{color:#C77A00}.k b.b{color:#4F6FDA}
+.k em{color:var(--mu)}
+.k small svg{width:26px;height:26px;padding:4px;border-radius:9px;box-shadow:0 2px 5px var(--sh1),inset 0 1px 0 rgba(255,255,255,.4)}
+.k.star{background:linear-gradient(135deg,#7C6AD8,#E8598A);border:0}.k.star::before,.k.star::after{display:none}
+.k.star small,.k.star em,.k.star b{color:#fff}
+ul.in li{background:var(--cd);border:1px solid var(--ln);border-right:5px solid var(--tc);border-radius:14px;box-shadow:var(--cs)}
+/* الأزرار والحقول */
+.btn{background:var(--tc);color:#fff;border-radius:12px;padding:10px 22px;font-family:inherit;font-weight:700;box-shadow:0 5px 12px rgba(70,50,110,.22),inset 0 1px 0 rgba(255,255,255,.35),inset 0 -3px 6px rgba(0,0,0,.12);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translateY(-1px)}.btn:active{transform:translateY(1px);box-shadow:inset 0 2px 6px rgba(0,0,0,.25)}
+.btn.s{background:var(--cd);color:var(--tx);border:1px solid var(--ln)}.btn.d{background:#D9443B;color:#fff}.btn.sm{padding:5px 13px;font-size:13px;border-radius:10px}
+input,select,textarea{background:var(--cd);border:1px solid var(--ln);border-radius:12px;padding:9px 12px;font-family:inherit;color:var(--tx);box-shadow:inset 0 2px 4px rgba(70,50,110,.07)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--tc);border-color:transparent}
+label{font-weight:700;color:var(--mu)}
+/* الجداول */
+.tw{border-radius:20px}
+th{background:var(--tc);font-weight:700;font-size:13.5px}
+th:first-child{border-radius:0 12px 0 0}th:last-child{border-radius:12px 0 0 0}
+td{border-bottom:1px solid var(--ln)}
+tr:hover td{background:rgba(124,106,216,.08)}
+.rk,.ec i{box-shadow:0 2px 5px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.4)}
+#toast{background:#2F2540;border-radius:14px;padding:11px 24px;box-shadow:var(--cl);font-weight:700}
+/* شاشة الدخول */
+.login{background:radial-gradient(600px 420px at 100% 0,rgba(124,106,216,.35),transparent),radial-gradient(600px 420px at 0 100%,rgba(232,89,138,.22),transparent),var(--bg)}
+.login form{border-radius:26px;padding:34px 30px;text-align:center;background:var(--cd);border:1px solid var(--ln);box-shadow:var(--cl)}
+.login form svg{margin:0 auto}.login h2{border:0;padding:0;font-size:26px;margin:8px 0 0}.login .lt{margin:0 0 10px;color:var(--mu)}
+.login label{text-align:right}.login .btn{font-size:16px;padding:12px}
+/* صفحات التقرير الرسمي */
+.ph2{background:linear-gradient(120deg,#5642B3,#7C6AD8)}.ph2 em{color:#5642B3}
+.pf{border-top-color:#7C6AD8}
+.pg{font-family:Tajawal,'Baloo Bhaijaan 2',Tahoma,sans-serif}
+.pg .k,.pg .cd{box-shadow:none;border-radius:14px}
+.pg th:first-child,.pg th:last-child{border-radius:0}
+@media print{
+:root:root:root{--bg:#fff;--cd:#fff;--tx:#2F2540;--mu:#6F6580;--ln:#E7DFD0;--sh1:rgba(0,0,0,.1);--sh2:transparent}
+body{background:#fff}
+.hero{margin:0 0 10px;box-shadow:none;border-radius:14px}
+.cd,.k,ul.in li{box-shadow:none}
+}
