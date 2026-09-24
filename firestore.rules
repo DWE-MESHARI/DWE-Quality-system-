@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function hasRole() { return request.auth != null && exists(/databases/$(database)/documents/roles/$(request.auth.uid)); }
+    function role() { return get(/databases/$(database)/documents/roles/$(request.auth.uid)).data.role; }
+    function canWrite() { return hasRole() && role() in ['admin', 'editor']; }
+
+    match /roles/{uid} { allow read: if request.auth != null && request.auth.uid == uid; allow write: if false; }
+    match /emp/{id}    { allow read: if hasRole(); allow write: if canWrite(); }
+    match /ev/{id}     { allow read: if hasRole(); allow write: if canWrite(); }
+    match /rep/{id}    { allow read: if hasRole(); allow write: if canWrite(); }
+    match /log/{id}    { allow read: if hasRole(); allow create: if canWrite(); allow update, delete: if false; }
+    match /cfg/{id}    { allow read: if hasRole(); allow write: if hasRole() && role() == 'admin'; }
+  }
+}
